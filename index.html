@@ -14,27 +14,37 @@
   <script crossorigin src = "https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
 </head>
 <body>
-  <div id="root"></div>
-  <!-- <div class="black font-size-1 box">Random Box</div> -->
-  <script type="text/babel">
+  <!-- <div id="root"></div> -->
+  <div class="black" id="random-box">Random Box</div>
+  <script src="app.js"></script>
+  <!-- <script type="text/babel">
     class RandomBox extends React.Component {
-      let background;
-      let size;
-      setInterval(function() {
-        const colors: ['black', 'red', 'green', 'blue'];
-        const letterSizes : ['font-size-1', 'font-size-2', 'font-size-3', 'font-size-4'];
+    //   render() {
+    //   setInterval(function() {
+    //     const colors = ['black', 'red', 'green', 'blue'];
+    //     const letterSizes = ['font-size-1', 'font-size-2', 'font-size-3', 'font-size-4'];
 
-        const backgroundColor = colors.map(el => background = el);
-        const fontSize = letterSizes.map(el => size = el);
-      }, 4000);
-      render() {
-        return(
-          <div className="box" style={{backgroundColor:{background}, fontSize: {size}}}>Random Box</div>
-        );
-      }
+    //     const backgroundColor = colors.map(el => background = el);
+    //     const fontSize = letterSizes.map(el => size = el);
+    //   }, 4000);
+    //     return(
+    //       <div className="box" style={{backgroundColor:{background}, fontSize: 'font-size-1'}}>Random Box</div>
+    //     );
+    //   }
+     render() {
+      const colors: ['black', 'red', 'green', 'blue'];
+      return(
+        setInterval(function() {
+          {colors.map(function(backgroundColor,index){
+            let background = backgroundColor;
+            return <div className="box" style={{backgroundColor:{background}, fontSize: 'font-size-1'}}></div>
+          })}
+        }, 4000);
+      );
+     }
     }
 
     ReactDOM.render(<RandomBox/>, document.getElementById('root'));
-  </script>
+  </script> -->
 </body>
 </html>
