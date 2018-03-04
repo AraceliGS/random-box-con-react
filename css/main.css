@@ -1,12 +1,13 @@
-div {
+.box {
   color: white;
   min-height: 320px;
   width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-
+/* 
 .black{
   background-color: black;
 }
@@ -23,6 +24,22 @@ div {
   background-color: blue;
 }
 
+.mina {
+  font-family: 'Mina', sans-serif;
+}
+
+.roboto {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.slabo {
+  font-family: 'Slabo 27px', serif;  
+}
+
 .font-size-1 {
   font-size: 2em;
 }
@@ -37,7 +54,7 @@ div {
 
 .font-size-4 {
   font-size: 3em;
-}
+} */
 
 
 

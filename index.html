@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Random-Box-Con-React</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Mina|Roboto+Condensed|Slabo+27px" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <!--Enlazando la libreria de react-->
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> 
@@ -14,37 +15,45 @@
   <script crossorigin src = "https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
 </head>
 <body>
-  <!-- <div id="root"></div> -->
-  <div class="black" id="random-box">Random Box</div>
+  <div id="root"></div>
   <script src="app.js"></script>
-  <!-- <script type="text/babel">
+  <script type="text/babel">
     class RandomBox extends React.Component {
-    //   render() {
-    //   setInterval(function() {
-    //     const colors = ['black', 'red', 'green', 'blue'];
-    //     const letterSizes = ['font-size-1', 'font-size-2', 'font-size-3', 'font-size-4'];
-
-    //     const backgroundColor = colors.map(el => background = el);
-    //     const fontSize = letterSizes.map(el => size = el);
-    //   }, 4000);
-    //     return(
-    //       <div className="box" style={{backgroundColor:{background}, fontSize: 'font-size-1'}}>Random Box</div>
-    //     );
+    //   counter: function() {
+    //     this.setState();
     //   }
-     render() {
-      const colors: ['black', 'red', 'green', 'blue'];
-      return(
-        setInterval(function() {
-          {colors.map(function(backgroundColor,index){
-            let background = backgroundColor;
-            return <div className="box" style={{backgroundColor:{background}, fontSize: 'font-size-1'}}></div>
-          })}
-        }, 4000);
-      );
-     }
+      render() {
+        const colors = ['black', 'red', 'green', 'blue'];
+      const fontFamily = ['mina', 'roboto', 'lato', 'slato'];
+      const fontSize = ['2em', '4em', '1em', '3em'];
+      let box = document.getElementById('random-box');
+      let arr = [];
+       {for(var i = 0; i < 3; i ++) {
+            var num = Math.floor(Math.random() * 4);
+            console.log(num)
+            arr.push(num);
+        };}
+        console.log(arr);
+        let backgroundColor = colors[arr[0]];
+        let font = fontFamily[arr[1]];
+        let letterSize = fontSize[arr[2]];
+        const boxStyle = {backgroundColor: backgroundColor, fontFamily: font,  fontSize: letterSize};
+        console.log(boxStyle)
+       return(
+        <div className="box" id="random-box" style={boxStyle}>Random Box</div>
+        )
+      }
     }
 
+    // class Box extends React.Component {
+    //   render() {
+    //     return(
+    //       <RandomBox/>
+    //     ) 
+    //   }
+    // }
+
     ReactDOM.render(<RandomBox/>, document.getElementById('root'));
-  </script> -->
+  </script>
 </body>
 </html>
