@@ -16,24 +16,31 @@
 </head>
 <body>
   <div id="root"></div>
-  <script src="app.js"></script>
   <script type="text/babel">
     class RandomBox extends React.Component {
       render() {
-        const colors = ['black', 'red', 'green', 'blue'];
         const fontFamily = ['mina', 'roboto', 'lato', 'slato'];
         const fontSize = ['2em', '4em', '1em', '3em'];
         let box = document.getElementById('random-box');
         let arr = [];
-        {for(var i = 0; i < 3; i ++) {
-          var num = Math.floor(Math.random() * 4);
+        let arrColors = [];
+        {for(var i = 0; i < 3; i++) {
+          var num1 = Math.floor(Math.random() * 256);
+          arrColors.push(num1);
+          console.log(num1)
+         }
+        }
+        {for(var i = 0; i < 2; i ++) {
+          var num2 = Math.floor(Math.random() * 3);
           // console.log(num);
-          arr.push(num);
-        };}
-        let backgroundColor = colors[arr[0]];
-        let font = fontFamily[arr[1]];
-        let letterSize = fontSize[arr[2]];
-        const boxStyle = {backgroundColor: backgroundColor, fontFamily: font,  fontSize: letterSize};
+          arr.push(num2);
+        }
+      }
+      console.log(arrColors);
+        let rgb = 'rgb(' + arrColors[0] + ',' + arrColors[1] + ',' + arrColors[2] + ')';
+        let font = fontFamily[arr[0]];
+        let letterSize = fontSize[arr[1]];
+        const boxStyle = {backgroundColor: rgb, fontFamily: font,  fontSize: letterSize};
         console.log(boxStyle);
         location.reload();
         return(

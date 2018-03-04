@@ -1,5 +1,6 @@
 .box {
-  color: white;
+  border: 1px solid black;
+  color: black;
   min-height: 320px;
   width: 40%;
   display: flex;
@@ -7,54 +8,3 @@
   align-items: center;
   text-align: center;
 }
-/* 
-.black{
-  background-color: black;
-}
-
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.mina {
-  font-family: 'Mina', sans-serif;
-}
-
-.roboto {
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.lato {
-  font-family: 'Lato', sans-serif;
-}
-
-.slabo {
-  font-family: 'Slabo 27px', serif;  
-}
-
-.font-size-1 {
-  font-size: 2em;
-}
-
-.font-size-2 {
-  font-size: 4em;
-}
-
-.font-size-3 {
-  font-size: 1em;
-}
-
-.font-size-4 {
-  font-size: 3em;
-} */
-
-
-
