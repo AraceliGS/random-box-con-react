@@ -19,9 +19,9 @@
   <script src="app.js"></script>
   <script type="text/babel">
     class RandomBox extends React.Component {
-    //   counter: function() {
-    //     this.setState();
-    //   }
+    // counter: function() {
+    //    this.setState();
+    // }
       render() {
         const colors = ['black', 'red', 'green', 'blue'];
       const fontFamily = ['mina', 'roboto', 'lato', 'slato'];
@@ -29,29 +29,22 @@
       let box = document.getElementById('random-box');
       let arr = [];
        {for(var i = 0; i < 3; i ++) {
-            var num = Math.floor(Math.random() * 4);
-            console.log(num)
-            arr.push(num);
+        var num = Math.floor(Math.random() * 4);
+        console.log(num)
+        arr.push(num);
         };}
         console.log(arr);
         let backgroundColor = colors[arr[0]];
         let font = fontFamily[arr[1]];
         let letterSize = fontSize[arr[2]];
         const boxStyle = {backgroundColor: backgroundColor, fontFamily: font,  fontSize: letterSize};
-        console.log(boxStyle)
+        console.log(boxStyle);
+        location.reload();
        return(
         <div className="box" id="random-box" style={boxStyle}>Random Box</div>
         )
       }
     }
-
-    // class Box extends React.Component {
-    //   render() {
-    //     return(
-    //       <RandomBox/>
-    //     ) 
-    //   }
-    // }
 
     ReactDOM.render(<RandomBox/>, document.getElementById('root'));
   </script>
